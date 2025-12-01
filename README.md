@@ -8,10 +8,8 @@ A Flutter application that showcases Dragon Ball characters using the Dragon Bal
 
 ## 📱 Demo
 
-<video width="200" height="340" controls>
-  <source src="recording.MP4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://user-images.githubusercontent.com/YOUR_USER_ID/UPLOAD_ID/screen_recording.mov
+
 
 
 
