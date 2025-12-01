@@ -8,7 +8,7 @@ A Flutter application that showcases Dragon Ball characters using the Dragon Bal
 
 ## 📱 Demo
 
-https://user-images.githubusercontent.com/YOUR_USER_ID/UPLOAD_ID/screen_recording.mov
+https://github.com/GangemiLorenzo/dragonball_heroes/blob/main/screen_recording.mov
 
 
 
