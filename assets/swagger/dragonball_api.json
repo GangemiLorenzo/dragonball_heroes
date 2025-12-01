@@ -1,0 +1,414 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Dragonball API Rest",
+        "description": "Documentación oficial de www.dragonball-api.com",
+        "version": "1.0",
+        "contact": {}
+    },
+    "tags": [],
+    "servers": [],
+    "paths": {
+        "/api/characters": {
+            "get": {
+                "operationId": "CharactersController_findAll",
+                "summary": "Get all characters if no params are provided, limit to 10 by default",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "required": false,
+                        "in": "query",
+                        "description": "Page number",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "required": false,
+                        "in": "query",
+                        "description": "Number of items per page",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "required": false,
+                        "in": "query",
+                        "description": "Character name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "gender",
+                        "required": false,
+                        "in": "query",
+                        "description": "Character gender",
+                        "schema": {
+                            "enum": [
+                                "Male",
+                                "Female",
+                                "Other",
+                                "Unknown"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "race",
+                        "required": false,
+                        "in": "query",
+                        "description": "Character race",
+                        "schema": {
+                            "enum": [
+                                "Saiyan",
+                                "Namekian",
+                                "Human",
+                                "Majin",
+                                "Frieza Race",
+                                "Jiren Race",
+                                "Android",
+                                "God",
+                                "Angel",
+                                "Evil",
+                                "Unknown",
+                                "Nucleico benigno",
+                                "Nucleico"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "affiliation",
+                        "required": false,
+                        "in": "query",
+                        "description": "Character affiliation",
+                        "schema": {
+                            "enum": [
+                                "Z Fighter",
+                                "Red Ribbon Army",
+                                "Namekian Warrior",
+                                "Freelancer",
+                                "Army of Frieza",
+                                "Other",
+                                "Pride Troopers",
+                                "Assistant of Vermoud",
+                                "Assistant of Beerus",
+                                "Villain"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of characters"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    },
+                    "502": {
+                        "description": "Bad Gateway"
+                    }
+                },
+                "tags": [
+                    "Characters"
+                ]
+            }
+        },
+        "/api/characters/{id}": {
+            "get": {
+                "operationId": "CharactersController_findOne",
+                "summary": "Get one character with origin planet and transformations",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "Character ID",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "One character with origin planet and transformations"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                },
+                "tags": [
+                    "Characters"
+                ]
+            }
+        },
+        "/api/planets": {
+            "get": {
+                "operationId": "PlanetsController_findAll",
+                "summary": "Get all planets if no params are provided, limit to 10 by default",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "required": false,
+                        "in": "query",
+                        "description": "Page number",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "required": false,
+                        "in": "query",
+                        "description": "Number of items per page",
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "required": false,
+                        "in": "query",
+                        "description": "Planet name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "isDestroyed",
+                        "required": false,
+                        "in": "query",
+                        "description": "Planet destroyed status",
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of planets"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    },
+                    "502": {
+                        "description": "Bad Gateway"
+                    }
+                },
+                "tags": [
+                    "Planets"
+                ]
+            }
+        },
+        "/api/planets/{id}": {
+            "get": {
+                "operationId": "PlanetsController_findOne",
+                "summary": "Get one planet with all characters that came from it",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "Planet ID",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get one planet with all characters that came from it"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                },
+                "tags": [
+                    "Planets"
+                ]
+            }
+        },
+        "/api/transformations": {
+            "get": {
+                "operationId": "TransformationController_findAll",
+                "summary": "Get all characters transformations if no params are provided, limit to 10 by default",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "List of characters transformations"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    },
+                    "502": {
+                        "description": "Bad Gateway"
+                    }
+                },
+                "tags": [
+                    "Transformations"
+                ]
+            }
+        },
+        "/api/transformations/{id}": {
+            "get": {
+                "operationId": "TransformationController_findOne",
+                "summary": "Get one character transformation by ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "Transformation ID",
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "One character"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                },
+                "tags": [
+                    "Transformations"
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "CreateCharacterDTO": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "race": {
+                        "type": "string",
+                        "enum": [
+                            "Saiyan",
+                            "Namekian",
+                            "Human",
+                            "Majin",
+                            "Frieza Race",
+                            "Jiren Race",
+                            "Android",
+                            "God",
+                            "Angel",
+                            "Evil",
+                            "Unknown",
+                            "Nucleico benigno",
+                            "Nucleico"
+                        ]
+                    },
+                    "gender": {
+                        "type": "string",
+                        "enum": [
+                            "Male",
+                            "Female",
+                            "Other",
+                            "Unknown"
+                        ]
+                    },
+                    "ki": {
+                        "type": "string"
+                    },
+                    "maxKi": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "affiliation": {
+                        "type": "string",
+                        "enum": [
+                            "Z Fighter",
+                            "Red Ribbon Army",
+                            "Namekian Warrior",
+                            "Freelancer",
+                            "Army of Frieza",
+                            "Other",
+                            "Pride Troopers",
+                            "Assistant of Vermoud",
+                            "Assistant of Beerus",
+                            "Villain"
+                        ]
+                    },
+                    "originPlanet": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "race",
+                    "gender",
+                    "ki",
+                    "maxKi",
+                    "description",
+                    "affiliation",
+                    "originPlanet"
+                ]
+            },
+            "CreatePlanetDTO": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "isDestroyed": {
+                        "type": "boolean"
+                    },
+                    "description": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "isDestroyed",
+                    "description"
+                ]
+            },
+            "TransformationDTO": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "ki": {
+                        "type": "string"
+                    },
+                    "character": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "ki",
+                    "character"
+                ]
+            }
+        }
+    }
+}

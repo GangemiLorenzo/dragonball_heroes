@@ -1,0 +1,123 @@
+{
+    "@@locale": "en",
+    "appName": "Dragon Ball Heroes",
+    "@appName": {
+        "description": "The name of the application"
+    },
+    "welcome": "Welcome",
+    "@welcome": {
+        "description": "Welcome message"
+    },
+    "loading": "Loading...",
+    "@loading": {
+        "description": "Loading indicator text"
+    },
+    "error": "Error",
+    "@error": {
+        "description": "Generic error message"
+    },
+    "retry": "Retry",
+    "@retry": {
+        "description": "Retry button text"
+    },
+    "ok": "OK",
+    "@ok": {
+        "description": "OK button text"
+    },
+    "cancel": "Cancel",
+    "@cancel": {
+        "description": "Cancel button text"
+    },
+    "dragonBallCharacters": "Dragon Ball Characters",
+    "@dragonBallCharacters": {
+        "description": "Title for Dragon Ball characters list"
+    },
+    "errorWithMessage": "Error: {message}",
+    "@errorWithMessage": {
+        "description": "Error message with dynamic content",
+        "placeholders": {
+            "message": {
+                "type": "String",
+                "description": "The error message"
+            }
+        }
+    },
+    "noCharactersFound": "No characters found",
+    "@noCharactersFound": {
+        "description": "Message when no characters are available"
+    },
+    "noMoreCharacters": "No more characters to load",
+    "@noMoreCharacters": {
+        "description": "Message when all characters have been loaded"
+    },
+    "characterDetails": "Character Details",
+    "@characterDetails": {
+        "description": "Title for character details page"
+    },
+    "characterNotFound": "Character not found",
+    "@characterNotFound": {
+        "description": "Message when character is not found"
+    },
+    "backToCharactersList": "Back to Characters List",
+    "@backToCharactersList": {
+        "description": "Button text to go back to characters list"
+    },
+    "description": "Description",
+    "@description": {
+        "description": "Label for description section"
+    },
+    "noDescriptionAvailable": "No description available.",
+    "@noDescriptionAvailable": {
+        "description": "Message when no description is available"
+    },
+    "originPlanet": "Origin Planet",
+    "@originPlanet": {
+        "description": "Label for origin planet section"
+    },
+    "unknown": "Unknown",
+    "@unknown": {
+        "description": "Text for unknown values"
+    },
+    "destroyed": "Destroyed",
+    "@destroyed": {
+        "description": "Status text for destroyed planets"
+    },
+    "transformations": "Transformations",
+    "@transformations": {
+        "description": "Label for transformations section"
+    },
+    "noTransformationsAvailable": "No transformations available",
+    "@noTransformationsAvailable": {
+        "description": "Message when no transformations are available"
+    },
+    "kiValue": "Ki: {value}",
+    "@kiValue": {
+        "description": "Ki level display format",
+        "placeholders": {
+            "value": {
+                "type": "String",
+                "description": "The Ki value"
+            }
+        }
+    },
+    "imageNotAvailable": "Image not available",
+    "@imageNotAvailable": {
+        "description": "Message when image cannot be loaded"
+    },
+    "transformationDetails": "Transformation Details",
+    "@transformationDetails": {
+        "description": "Title for transformation details dialog"
+    },
+    "name": "Name",
+    "@name": {
+        "description": "Label for name field"
+    },
+    "kiLevel": "Ki Level",
+    "@kiLevel": {
+        "description": "Label for Ki level field"
+    },
+    "id": "ID",
+    "@id": {
+        "description": "Label for ID field"
+    }
+}
