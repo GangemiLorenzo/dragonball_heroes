@@ -53,7 +53,7 @@ The app consumes the Dragon Ball API with the following endpoints:
 The project includes the following testing:
 
 - **Unit Tests**: Business logic and utilities
-- **Integration Tests**: End-to-end workflows
+- **Bloc Tests**: State Management logic
 
 Run tests with:
 ```bash
